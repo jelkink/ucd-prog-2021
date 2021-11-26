@@ -1,0 +1,23 @@
+2021-11-26 12:34:30 Add party with random strategy
+2021-11-26 12:34:30 Add party with sticker strategy
+2021-11-26 12:34:30 Add party with hunter strategy
+2021-11-26 12:34:30 Add party with aggregator strategy
+2021-11-26 12:34:30 Add party with predator strategy
+2021-11-26 12:34:30 Start simulation run of 1 steps
+2021-11-26 12:34:30 End simulation run
+2021-11-26 12:34:30 Start simulation run of 99 steps
+2021-11-26 12:34:31 End simulation run
+2021-11-26 12:34:31 Start simulation run of 900 steps
+2021-11-26 12:34:40 End simulation run
+2021-11-26 12:36:47 Create simulation with 1000 voters
+2021-11-26 12:36:47 Add party with random strategy
+2021-11-26 12:36:47 Add party with sticker strategy
+2021-11-26 12:36:47 Add party with hunter strategy
+2021-11-26 12:36:47 Add party with aggregator strategy
+2021-11-26 12:36:47 Add party with predator strategy
+2021-11-26 12:36:47 Start simulation run of 1 steps
+2021-11-26 12:36:47 End simulation run
+2021-11-26 12:36:47 Start simulation run of 99 steps
+2021-11-26 12:36:48 End simulation run
+2021-11-26 12:36:48 Start simulation run of 900 steps
+2021-11-26 12:36:56 End simulation run

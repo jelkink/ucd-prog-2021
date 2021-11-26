@@ -9,6 +9,7 @@ class Simulation:
     self.parties = []
     self.time = 0
     self.log = Log("log.txt")
+    self.log.write("Create simulation with " + format(number_of_voters, "d") + " voters")
 
     for i in range(number_of_voters):
       self.voters.append(Voter(self))
