@@ -1,0 +1,19 @@
+{
+  "log-file": "Simulation 01 log.txt",
+  "voters": 1000,
+  "parties": [
+    {
+      "name": "FF",
+      "strategy": "hunter"
+    },
+    {
+      "name": "Labour",
+      "strategy": "aggregator"
+    },
+    {
+      "name": "FG",
+      "strategy": "predator"
+    }
+  ],
+  "jump-size": 0.05
+}

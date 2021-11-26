@@ -3,7 +3,8 @@ from location import Location
 class Voter:
 
   # upon initialisation, take on a random location
-  def __init__(self):
+  def __init__(self, simulation):
+    self.simulation = simulation
     self.location = Location()
 
   # find nearest party and register self as a voter

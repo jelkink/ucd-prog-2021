@@ -3,7 +3,8 @@ import random
 
 class Party:
 
-  def __init__(self, strategy):
+  def __init__(self, simulation, strategy):
+    self.simulation = simulation
     self.location = Location()
     self.strategy = strategy
     self.voters = []
