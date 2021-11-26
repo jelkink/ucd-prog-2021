@@ -5,7 +5,7 @@ class Party:
 
   def __init__(self, simulation, strategy):
     self.simulation = simulation
-    self.location = Location()
+    self.location = Location(self.simulation)
     self.strategy = strategy
     self.voters = []
 
@@ -38,7 +38,7 @@ class Party:
       sumx += voter.location.x
       sumy += voter.location.y
     
-    self.location.move_towards(Location(sumx / len(self.voters), sumy / len(self.voters)))
+    self.location.move_towards(Location(self.simulation, sumx / len(self.voters), sumy / len(self.voters)))
   
   # hunter strategy: go in a random direction, if votes decrease, turn
   def update_hunter(self):

@@ -5,7 +5,7 @@ class Voter:
   # upon initialisation, take on a random location
   def __init__(self, simulation):
     self.simulation = simulation
-    self.location = Location()
+    self.location = Location(self.simulation)
 
   # find nearest party and register self as a voter
   def vote(self, parties):

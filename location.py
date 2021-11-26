@@ -6,8 +6,9 @@ movement_speed = 0.05
 
 class Location:
 
-  def __init__(self, x = None, y = None):
+  def __init__(self, simulation, x = None, y = None):
 
+    self.simulation = simulation
     # when x and y are not provided, generate random coordinates
     if x is None:
       self.x = random.random()
