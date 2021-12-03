@@ -1,6 +1,7 @@
 from voter import Voter
 from party import Party
 from log import Log
+from tracker import Tracker
 
 class Simulation:
 
@@ -9,6 +10,7 @@ class Simulation:
     self.voters = []
     self.parties = []
     self.time = 0
+    self.tracker = Tracker(self)
 
     self.log = Log(config.get_log_filename())
     self.log.write("Create simulation with " + format(config.get_number_of_voters(), "d") + " voters")
@@ -31,9 +33,14 @@ class Simulation:
       
       for party in self.parties:
         party.update(self.parties)
+      
+      self.tracker.save_state()
 
       self.time += 1
     self.log.write("End simulation run")
+  
+  def save_output(self):
+    self.tracker.save_output_file()
   
   def print_parties_list(self):
     print("\nTime = %d" % self.time)

@@ -1,5 +1,6 @@
 {
   "log-file": "Simulation 01 log.txt",
+  "output-file": "Simulation 01 output.csv",
   "voters": 1000,
   "parties": [
     {

@@ -9,6 +9,9 @@ class Configuration:
   def get_log_filename(self):
     return self.data["log-file"]
   
+  def get_output_filename(self):
+    return self.data["output-file"]
+
   def get_number_of_voters(self):
     return self.data["voters"]
   
