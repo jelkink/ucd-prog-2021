@@ -3,10 +3,11 @@ import random
 
 class Party:
 
-  def __init__(self, simulation, strategy):
+  def __init__(self, simulation, name, strategy):
     self.simulation = simulation
     self.location = Location(self.simulation)
     self.strategy = strategy
+    self.name = name
     self.voters = []
 
     # extra information needed for predator parties

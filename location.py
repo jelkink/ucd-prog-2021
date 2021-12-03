@@ -1,9 +1,6 @@
 import random
 import math
 
-# movement speed is fixed as a global variable (not good practice)
-movement_speed = 0.05
-
 class Location:
 
   def __init__(self, simulation, x = None, y = None):
@@ -37,8 +34,8 @@ class Location:
   
   # move in a particular direction (in degrees)
   def move_direction(self, degrees):
-    self.x += math.sin(degrees / 180 * math.pi) * movement_speed
-    self.y += math.cos(degrees / 180 * math.pi) * movement_speed
+    self.x += math.sin(degrees / 180 * math.pi) * self.simulation.config.get_speed()
+    self.y += math.cos(degrees / 180 * math.pi) * self.simulation.config.get_speed()
     
     self.boundary_check()
 
@@ -48,9 +45,9 @@ class Location:
     delta_y = other.y - self.y
     distance = math.sqrt(delta_x ** 2 + delta_y ** 2)
 
-    if distance > movement_speed:
-      self.x += delta_x * movement_speed / distance
-      self.y += delta_y * movement_speed / distance
+    if distance > self.simulation.config.get_speed():
+      self.x += delta_x * self.simulation.config.get_speed() / distance
+      self.y += delta_y * self.simulation.config.get_speed() / distance
     else:
       self.x += delta_x
       self.y += delta_y

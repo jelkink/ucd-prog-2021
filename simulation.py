@@ -4,19 +4,20 @@ from log import Log
 
 class Simulation:
 
-  def __init__(self, number_of_voters):
+  def __init__(self, config):
+    self.config = config
     self.voters = []
     self.parties = []
     self.time = 0
-    self.log = Log("log.txt")
-    self.log.write("Create simulation with " + format(number_of_voters, "d") + " voters")
 
-    for i in range(number_of_voters):
+    self.log = Log(config.get_log_filename())
+    self.log.write("Create simulation with " + format(config.get_number_of_voters(), "d") + " voters")
+
+    for i in range(config.get_number_of_voters()):
       self.voters.append(Voter(self))
-  
-  def add_party(self, strategy):
-    self.log.write("Add party with " + strategy + " strategy")
-    self.parties.append(Party(self, strategy))
+    
+    for party in config.get_parties():
+      self.parties.append(Party(self, party["name"], party["strategy"]))
 
   def run(self, time_steps):
 
@@ -36,8 +37,8 @@ class Simulation:
   
   def print_parties_list(self):
     print("\nTime = %d" % self.time)
-    for i, party in enumerate(self.parties):
-      print("Party %02d (%10s @ %.2f,%.2f): %10d votes" % (i, party.strategy, party.location.x, party.location.y, party.votes()))
+    for party in self.parties:
+      print("Party %10s (%10s @ %.2f,%.2f): %10d votes" % (party.name, party.strategy, party.location.x, party.location.y, party.votes()))
   
   def get_log(self):
     return self.log
