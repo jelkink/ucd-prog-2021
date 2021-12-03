@@ -11,7 +11,7 @@ sim.run(1)
 sim.print_parties_list()
 
 # show results after 100 elections
-sim.run(99)
+sim.run(999)
 sim.print_parties_list()
 
 sim.save_output()

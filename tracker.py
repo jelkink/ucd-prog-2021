@@ -24,3 +24,5 @@ class Tracker:
       
       for line in self.data:
         output_writer.writerow(line.values())
+
+    self.simulation.log.write("Output saved to \"" + self.simulation.config.get_output_filename() + "\"")
