@@ -3,7 +3,7 @@ from configuration import Configuration
 
 config = Configuration("config.json")
 
-# create simulation with 1000 voters 
+# create simulation
 sim = Simulation(config)
 
 # run 1 election to report on starting point
