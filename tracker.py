@@ -6,6 +6,12 @@ class Tracker:
     self.simulation = simulation
     self.data = []
 
+  ## Note that this is a very memory inefficient way to store
+  ## the data, as each time step, all party names and strategies
+  ## are saved, and for each data point, the names of the variables
+  ## ("time", "party", etc.) are saved to memory again. Much more
+  ## efficient to just store the numerical data and write a more
+  ## complicated save_output_file that figures out what is what.
   def save_state(self):
     for party in self.simulation.parties:
       self.data.append({
